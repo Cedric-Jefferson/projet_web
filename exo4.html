@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>CV</h2>
+
+<form name="myform" action="exo4.php" method="post" onsubmit="return validateForm()">
+  Nom:<br>
+  <input type="text" name="nom">
+  <br>
+  Prénom:<br>
+  <input type="text" name="prenom">
+  <br>
+  Date de naissance:<br>
+  <input type="date" name="date">
+  <br>
+  Niveau:<br>
+  <input type="text" name="niveau">
+  <br>
+  <input type="submit" value="Submit">
+</form> 
+
+<script>
+function validateForm() {
+  var nom = document.forms["myform"]["nom"].value;
+  var prenom = document.forms["myform"]["prenom"].value;
+  var date = document.forms["myform"]["date"].value;
+  var niveau = document.forms["myform"]["niveau"].value;
+  if (nom == "" || prenom == "" || date == "" || niveau == "") {
+    alert("Certains champs ne sont pas remplis");
+    return false;
+  }
+  alert("Bonjour");
+} 
+</script>
+
+</body>
+</html>
